@@ -168,11 +168,11 @@ body {
       color: #444; }
 
 .btn-success {
-  background-color: #51be78;
-  border-color: #51be78; }
+  background-color: #f7350a;
+  border-color: #000000; }
   .btn-success:hover {
-    background-color: #51be78 !important;
-    border-color: #51be78 !important; }
+    background-color: #5156be !important;
+    border-color: #5e51be !important; }
   .btn-success:active {
     background-color: #51be78 !important;
     border-color: #51be78 !important; }
@@ -334,7 +334,7 @@ header {
       font-size: 44px;
       margin-left: -40px;
       font-weight: 600;
-      color: blue; }
+      color: white }
     .slider-detail .carousel-caption p {
       margin-left: -40px;
       font-weight: 600;
@@ -353,9 +353,12 @@ header {
   .slider-detail .fvgb {
     color: #ffffff; }
 
+
+
+
 /* =================== Keyfeatures Starts Here =================== */
 .key-feature {
-  padding: 50px;
+  padding: 50px 0;
   background-color: #FFF; }
   @media screen and (max-width: 940px) {
     .key-feature {
@@ -368,7 +371,7 @@ header {
     text-align: center;
     margin-bottom: 60px;
     margin-top: 20px;
-    background-color: #51be78;
+    background-color: #5c51be;
     border-radius: 8px; }
     .key-feature .key-cover i {
       padding: 18px;
@@ -404,6 +407,34 @@ header {
         color: #444; }
       .key-feature .key-cover:hover p {
         color: #444; }
+
+        .key-div {
+          position: relative; /* Enable positioning for hover effects */
+          text-align: center;
+          padding: 20px;
+          border: 1px solid #ddd;
+          margin-bottom: 20px;
+          cursor: pointer; /* Set cursor to pointer on hover */
+        }
+        .key-div:hover .key-cover img {
+          opacity: 1; /* Show image on hover */
+          position: absolute;  /* Absolute positioning for below content */
+          bottom: 0;  /* Position at the bottom */
+          left: 0;
+          width: 100%;
+          height: auto;  /* Allow image to adapt height */
+        }
+        .key-cover img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;  /* Allow image to adapt height */
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          aspect-ratio: 16 / 9;  /* Set desired aspect ratio (adjust as needed) */
+        }
+        
 
 /* =================== Courses Starts Here =================== */
 .cources {
@@ -457,14 +488,43 @@ header {
       margin-bottom: 20px; }
       .our-team .team-row .single-usr img {
         width: 100%; }
-      .our-team .team-row .single-usr .det-o {
-        padding: 20px;
-        background-color: #1bbc9b; }
+        .our-team .team-row .single-usr .det-o {
+          padding: 20px;
+          background-color: #1b1bbc;
+          flex: 1; /* Let the details container fill the remaining space */
+          display: flex; /* Make details container a flex container */
+          flex-direction: column; /* Stack child elements vertically */}
+          
         .our-team .team-row .single-usr .det-o h4 {
+          font-size: small;
           color: #FFF;
-          margin-bottom: 0px; }
+          margin-bottom: 0px;
+        font-size: large ; }
         .our-team .team-row .single-usr .det-o i {
+          
           color: #FFF; }
+
+            .team-row {
+            display: flex; /* Make the row a flex container */
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+          }
+          
+          .single-usr {
+            flex: 1 0 auto; /* Make each team member section flex equally */
+            margin: 1px; /* Add some margin for spacing */
+            border: 1px solid #ddd; /* Optional border for styling */
+            padding: 9px; /* Optional padding for content */
+          }
+        
+          .single-usr img {
+            width: 100%; /* Ensure image fills container width */
+            height: auto;  /* Allow image to adapt height */
+            object-fit: cover;  /* Maintain aspect ratio while covering container */
+            /* Adjust aspect-ratio as needed (optional): */
+            aspect-ratio: 4 / 6;
+          }
+          
+          
 
 /*====================================== Blog Style ====================================*/
 .blog {
@@ -626,48 +686,83 @@ footer {
 
 /* ===================================== Gallery Style CSS ==================================== */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust width as needed */
-  grid-gap: 10px; /* Adjust gap between images */
-  margin: 0 auto;
-  width: 80%; /* Adjust width as needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribute images evenly */
+  margin: 20px 0;
 }
 
+.frame {
+  overflow: hidden; /* Prevent image overflow */
+  position: relative; /* Enable hover effects */
+}
+
+.frame img {
+  width: 100%; /* Adjust image width as needed */
+  height: auto; /* Allow images to adapt height */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom on hover */
+}
+
+.frame img:hover {
+  transform: scale(1.1); /* Zoom effect on hover (adjust scale as needed) */
+}
+
+/* Optional styles */
+.frame {
+  border: 1px solid #ddd; /* Add a border (optional) */
+  padding: 5px; /* Add padding around images (optional) */
+}
+
+.frame img {
+  width: 100%; /* Ensure image fills container width */
+  height: auto; /* Allow image to adapt height */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  /* Adjust aspect-ratio as needed (optional): */
+  aspect-ratio: 4 / 3
+ 
+}
+
+
+/* Add hover effect for gallery images (optional) */
 .gallery img {
-  width: 200px; /* Adjust image width as needed */
-  height: 200px; /* Adjust image height as needed */
-  margin: 10px;
-  object-fit: cover; /* Maintain aspect ratio */
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.gallery img:hover {
-  transform: scale(1.1); /* Zoom on hover */
-}
-
-.preview-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  opacity: 0;
-  visibility: hidden;
+  width: 100%; /* Adjust image width as needed */
+  height: auto; /* Allow images to adapt height */
+  opacity: 0.8; /* Adjust initial opacity */
   transition: opacity 0.3s ease-in-out;
 }
 
-.preview-container.active {
-  opacity: 1;
-  visibility: visible;
+.gallery img:hover {
+  opacity: 1; /* Increase opacity on hover */
 }
 
-#preview-image {
-  display: block;
-  margin: auto;
-  max-width: 80%;
-  max-height: 80%;
+/* Fancybox styles (adjust as needed) */
+.fancybox-wrap {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+.fancybox-skin {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+ /* ===================================== Countdown Style CSS ==================================== */
+
+
+ .countdown {
+  display: flex;
+  justify-content:center;
+ 
+}
+.countdown-container {
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 70px;
+  font-size: 24px;
 }
 
 /* ===================================== Admision Style CSS ==================================== */

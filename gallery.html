@@ -12,11 +12,35 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="path/to/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/fancybox/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+     
+     
 </head>
 
     <body>
-        
-         <!-- ################# Header Starts Here#######################--->
+        <script src="path/to/bootstrap.bundle.min.js" integrity="sha384-glznVEeqkGA1WqSuCvqIrIYQgQTXYoiCTuj قابلة للتنفيذ لمستخدمي شاشات القراءة النصية." crossorigin="anonymous"></script>
+
+        <script src="path/to/fancybox/jquery.fancybox.min.js"></script>
+
+        <script>
+            Fancybox.bind('[data-fancybox="gallery"]', {
+              // Enable additional features (optional)
+              arrows: true, // Display navigation arrows
+              infobar: true, // Display information bar (counter and title)
+              toolbar: true, // Display toolbar with zoom, full screen, etc. (requires `buttons` helper)
+              buttons: [
+                "zoom", // Enable zoom button
+                "slideShow", // Enable slideshow toggle button (optional)
+                "fullScreen", // Enable full screen button
+                "download", // Enable download button (optional)
+                "thumbs", // Enable thumbnail navigation (optional)
+                "close" // Enable close button
+              ],
+            });
+          </script>
+             <!-- ################# Header Starts Here#######################--->
 
     <header class="continer-fluid ">
         <div  class="header-top">
@@ -26,7 +50,7 @@
                         <ul class="ulleft">
                             <li>
                                 <i class="far fa-envelope"></i>
-                               cccollegenise@gmail.com
+                               cccollegenise2024@gmail.com
                                 <span>|</span></li>
                             <li>
                                 <i class="fas fa-phone-volume"></i>
@@ -95,6 +119,10 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="contact_us.html">Contact US</a>
                                     </li>
+
+
+
+
                                 </ul>
                                 <a class="nav-btn" href="AdmissionForm.html">
                                     <button class="btn btn-sm btn-success">Apply Here</button>
@@ -106,6 +134,7 @@
             </div>
         </div>
     </header>
+
 
     <div class="page-nav no-margin row">
         <div class="container">
@@ -119,20 +148,55 @@
         </div>
     </div>
 <body>
-  <div class="gallery">
-    <img src="assets/images/slider/Compound_2.jpg" alt="Image 1" data-preview="preview1.jpg">
-    <img src="assets/images/slider/Enviroment_5.jpg" alt="Image 2" data-preview="preview2.jpg">
-    <img src="assets/images/Lab_1.jpg" alt="Image 3" data-preview="preview3.jpg">
-    <img src="assets/images/Computer _6.jpg" alt="Image 4" data-preview="preview4.jpg">
-    <img src="assets/images/Physics_4.jpg" alt="Image 5" data-preview="preview5.jpg">
-    <img src="assets/images/computer_3.jpg" alt="Image 6" data-preview="preview6.jpg">
-  </div>
-  
-  <div class="preview-container">
-    <img src="" alt="Preview Image" id="preview-image">
-  </div>
-  
-  <script src="script.js"></script>
+    
+    <div class="gallery row">
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+            
+          <a data-fancybox="gallery" href="assets/images/computer_3.jpg" ><img src="assets/images/computer_3.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+          <a  data-fancybox="gallery" href="assets/images/slider/Enviroment_5.jpg"><img src="assets/images/slider/Enviroment_5.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+          <a data-fancybox="gallery" href="assets/images/Lab_1.jpg" ><img src="assets/images/Lab_1.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="frame"> 
+          <a data-fancybox="gallery" href="assets/images/Computer _6.jpg" ><img src="assets/images/slider/Compound_2.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+          <a data-fancybox="gallery" href="assets/images/Expert Faculty.jpg" ><img src="assets/images/Expert Faculty.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+          <a data-fancybox="gallery" href="assets/images/Lab_2.jpg"><img src="assets/images/Lab_2.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+      </div>
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+          <a  data-fancybox="gallery" href="assets/images/Computer _6.jpg" ><img src="assets/images/Computer _6.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="frame">
+            <a data-fancybox="gallery" href="assets/images/Compound_Sid_ view.jpg" ><img src="assets/images/Compound_Sid_ view.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+          
+      
 
   <div class="banner">
     <h2>Enrol Your Child Now!</h2>
@@ -151,7 +215,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="addet">
-                        street no & name
+                        Cornelia Connelly college Rd
                         Nise
                         Anambra, Nigeria
                     </div>
@@ -161,7 +225,7 @@
                         <i class="far fa-envelope-open"></i>
                     </div>
                     <div class="addet">
-                        cccollegenis@gmail.com <br>
+                        cccollegenis2024@gmail.com <br>
                         
                     </div>
                 </div>
@@ -177,16 +241,16 @@
             <div class="col-md-3 fotblog">
                 <h2>From latest Blog</h2>
                 <div class="blohjb">
-                    <p>dignissim. Integer tempor facilisis malesuada. Proin ac varius velit, tincidunt condimentum</p>
-                    <span>22-1-2019</span>
+                    <p>Cornelia Connelly College, Nise will be open officially on 10th August, 2024</p>
+                    <span>22-03-2024</span>
                 </div>
                 <div class="blohjb">
-                    <p>dignissim. Integer tempor facilisis malesuada. Proin ac varius velit, tincidunt condimentum</p>
-                    <span>22-1-2019</span>
+                    <p>Academic activities will start on 2nd September, 2024.</p>
+                    <span>14-03-2024</span>
                 </div>
                 <div class="blohjb">
-                    <p>dignissim. Integer tempor facilisis malesuada. Proin ac varius velit, tincidunt condimentum</p>
-                    <span>22-1-2019</span>
+                    <p>The pioneer Principal is Rev. Sister Clarence Uzogara, SHCJ.</p>
+                    <span>10-2-2024</span>
                 </div>
             </div>
             <div class="col-md-3 glink">
@@ -194,7 +258,7 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-angle-double-right"></i>Home</a></li>
                     <li><a href="about_us.html"><i class="fas fa-angle-double-right"></i>About Us</a></li>
-                    <li><a href="courses.html"><i class="fas fa-angle-double-right"></i>Admission</a></li>
+                    <li><a href="courses.html"><i class="fas fa-angle-double-right"></i>Cources</a></li>
                     <li><a href="blog.html"><i class="fas fa-angle-double-right"></i>Blog</a></li>
                     <li><a href="gallery.html"><i class="fas fa-angle-double-right"></i>Gallery</a></li>
                     <li><a href="contact_us.html"><i class="fas fa-angle-double-right"></i>Contact Us</a></li>
@@ -215,9 +279,11 @@
         </div>
     </div>
 </footer>
+
 <div class="copy">
             <div class="container">
-                <a href="#">2024 Cornelia Connelly College &copy; All Rights Reserved</a>
+                <a href="#">2024 Cornelia Connelly College Nise, Anambra State &copy; All Rights Reserved</a><br>
+                Powered by Salubre Tech
                 
                 <span>
                 <a><i class="fab fa-google-plus-g"></i></a>

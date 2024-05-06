@@ -91,9 +91,9 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="courses.html">Admission</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="blog.html">Blog</a>
-                                        </li>
+                                        <!-- <li class="nav-item">
+                                        <a class="nav-link" href="blog.html">Blog</a>
+                                    </li>-->
                                         <li class="nav-item">
                                             <a class="nav-link" href="contact_us.html">Contact US</a>
                                         </li>
@@ -137,6 +137,8 @@
 
       </div>
 
+    
+      
       <div class="row contact-rooo no-margin">
         <div class="container">
            <div class="row">
@@ -179,19 +181,12 @@
               
           <h2 style="margin-top:10px;">Address</h2>
 
-    Cornelia Connelly College <br>
-    Nise<br>
-    Anambra State, Nigeria<br>
-    Phone:+91 9159669599<br>
-    Email:info@cccollege.org<br>
-    Website:www.cccollege.org<br>
-
- 
-       
-            
-                
-                
-              
+            Cornelia Connelly College <br>
+            Nise<br>
+            Anambra State, Nigeria<br>
+            Phone:+91 9159669599<br>
+            Email:info@cccollege.org<br>
+            Website:www.cccollege.org<br>  
            </div>    
                 
              
@@ -201,7 +196,42 @@
         </div>
         
       </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
 
+      <script>
+      $(document).ready(function() {
+          $('#sendMessageBtn').click(function(e) {
+              e.preventDefault(); // Prevent the default form submission
+              
+              // Get form data
+              var name = $('#name').val();
+              var email = $('#email').val();
+              var mobile = $('#mobile').val();
+              var message = $('#message').val();
+              
+              // Send form data via AJAX
+              $.ajax({
+                  type: 'POST',
+                  url: '/submit_contact_form/',
+                  data: {
+                      'name': name,
+                      'email': email,
+                      'mobile': mobile,
+                      'message': message
+                  },
+                  success: function(response) {
+                      // Display success message
+                      $('#formMessage').html('<div class="alert alert-success">Form submitted successfully!</div>');
+                  },
+                  error: function(xhr, status, error) {
+                      // Display validation errors or error message
+                      $('#formMessage').html('<div class="alert alert-danger">' + xhr.responseText + '</div>');
+                  }
+              });
+          });
+      });
+      </script>
+      
    
       <div class="banner">
         <h2>Enrol Your Child Now!</h2>
